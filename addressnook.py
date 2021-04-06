@@ -12,9 +12,8 @@ def Add(Person):
     contactList[f'{name}'] = [f'{email}', f'{tel}']
 
 def List():
-    # for name, email, tel in contactList.items():
-    #     print(f'Contact {name} at {email} or {tel}')
-    print(contactList)
+    for word in contactList.items():
+        print(f'Name: {word}; Email: {word}; Tel. number: {word}')
 
 def Delete():
     del_contact = input('Delete contact: ')
@@ -23,9 +22,9 @@ def Delete():
         print(f'Contact {del_contact} has been deleted')
 
 def Modify():
-    print(contactList)
+    List()
     select_contact = input('Select a contact: ')
-
+    # if contactList.has_key(select_contact):
 
 while True:
     command = input('Enter a command: Add / List / Delete / Modify: ')
